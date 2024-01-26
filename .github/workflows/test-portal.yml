@@ -22,8 +22,7 @@ on:
 
 env:
   GITHUB_COMMIT_ID: ${{ github.event.pull_request.head.sha }}
-#  GITHUB_PR_ID: ${{ github.event.pull_request.id }}
-  GITHUB_PR_ID: "PolicyTesting"
+  GITHUB_PR_ID: ${{ github.event.pull_request.id }}
   TEMP_SUBSCRIPTIONS_JSON_PATH: "./src/data/subscriptions.json"
   TEMP_DEPLOYMENT_OBJECT_PATH: "./src/data/eslzArm.test.deployment.json"
   POLICY_DIR: "src/resources/Microsoft.Authorization/policyDefinitions"
