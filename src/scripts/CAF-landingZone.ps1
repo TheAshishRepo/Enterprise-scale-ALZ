@@ -1,12 +1,12 @@
 
 # Deploying management group structure for Enterprise-Scale
 
-New-AzManagementGroupDeployment -Name $DeploymentName `
-                                -ManagementGroupId $TenantRootGroupId `
-                                -Location $Location `
-                                -TemplateFile .\eslzArm\managementGroupTemplates\mgmtGroupStructure\mgmtGroups.json `
-                                -topLevelManagementGroupPrefix $ESLZPrefix `
-                                -Verbose
+New-AzManagementGroup -Name $DeploymentName `
+                      -ManagementGroupId $TenantRootGroupId `
+                      -Location $Location `
+                      -TemplateFile .\eslzArm\managementGroupTemplates\mgmtGroupStructure\mgmtGroups.json `
+                      -topLevelManagementGroupPrefix $ESLZPrefix `
+                      -Verbose
 
 # Deploy core policy definitions to ESLZ intermediate root management group
 
