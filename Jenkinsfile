@@ -26,8 +26,6 @@ pipeline {
 
         
     }
-    
-    stages {
         stage('Deploy CAF-Landing Zone') {
             steps {
                 script {
@@ -54,7 +52,7 @@ pipeline {
                 }
             }
         }
-    }
+    
 
 
 }
