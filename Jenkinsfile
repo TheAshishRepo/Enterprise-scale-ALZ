@@ -35,7 +35,7 @@ pipeline {
                         $ESLZPrefix = "CAF-LZ"
                         $Location = "EastUS"
                         $DeploymentName = "EntScale"
-                        $TenantRootGroupId = (Get-AzTenant).Id
+                        $TenantRootGroupId = "${(Get-AzTenant).Id}"
                         $ManagementSubscriptionId = "top_level_mgmt_group"
                         $ConnectivitySubscriptionId = "CAF_connectivity_SID"
                         $ConnectivityAddressPrefix = "10.0.0.20/24"
