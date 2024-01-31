@@ -66,10 +66,8 @@ pipeline {
                     // Run a PowerShell script from a file
                     //powershell returnStatus: true, script: '/var/lib/jenkins/workspace/Enterprise-scale-Landing-Zone/src/scripts/CAF-landingZone.ps1'
                     //echo "hello world"
-                    //powershell returnStatus: true, script: '. .\\CAF-landingZone.ps1'
-                    sh 'su - jenkinsuser'
-                    sh 'whoami'
-                    sh 'pwsh CAF-landingZone.ps1'
+                    powershell returnStatus: true, script: 'CAF-landingZone.ps1'
+                    
                     
                    
                 }
