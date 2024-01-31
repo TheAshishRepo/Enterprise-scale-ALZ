@@ -22,7 +22,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-policy1" `
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-policy2" `
                                 -ManagementGroupId $ESLZPrefix `
                                 -Location $Location `
-                                -TemplateFile .\eslzArm\managementGroupTemplates\policyDefinitions\DENY-PublicEndpointsPolicySetDefinition.json `
+                                -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DENY-PublicEndpointsPolicySetDefinition.json `
                                 -Verbose
 
 # Deploying policy initiative for associating private DNS zones with private endpoints for Azure PaaS services
@@ -30,7 +30,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-policy2" `
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-policy3" `
                                 -ManagementGroupId $ESLZPrefix `
                                 -Location $Location `
-                                -TemplateFile .\eslzArm\managementGroupTemplates\policyDefinitions\DINE-PrivateDNSZonesPolicySetDefinition.json `
+                                -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DINE-PrivateDNSZonesPolicySetDefinition.json `
                                 -Verbose
 
 # Add dedicated subscription for platform management
