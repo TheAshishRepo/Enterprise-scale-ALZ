@@ -30,8 +30,8 @@ pipeline {
                 script {
                     // Login to Azure using Azure CLI
                     //withCredentials([azureServicePrincipal('Jenkins-Azure-Integration-SPN')]) {
-                    //   sh "az login --service-principal -u \$AZURE_CLIENT_ID -p \$AZURE_CLIENT_SECRET --tenant \$AZURE_TENANT_ID"
-                         sh "az login --service-principal -u 7f707d6e-9b20-4963-ab1d-11383794c758 -p Zr18Q~QCK4uP6fVW5D4KermCwnCkRtjqr2E62b6Y --tenant d0e16214-52b0-43f5-879b-faf4fc79ccf3"
+                    // sh "az login --service-principal -u \$AZURE_CLIENT_ID -p \$AZURE_CLIENT_SECRET --tenant \$AZURE_TENANT_ID"
+                    // sh "az login --service-principal -u 7f707d6e-9b20-4963-ab1d-11383794c758 -p Zr18Q~QCK4uP6fVW5D4KermCwnCkRtjqr2E62b6Y --tenant d0e16214-52b0-43f5-879b-faf4fc79ccf3"
                     }
                     
                     // Set Azure subscription
@@ -50,6 +50,7 @@ pipeline {
 
                      // Run multiple commands using a script block
                     powershell '''
+                        az login --service-principal -u 7f707d6e-9b20-4963-ab1d-11383794c758 -p Zr18Q~QCK4uP6fVW5D4KermCwnCkRtjqr2E62b6Y --tenant d0e16214-52b0-43f5-879b-faf4fc79ccf3
                         $ESLZPrefix = "CAF-LZ"
                         $Location = "EastUS"
                         $DeploymentName = "EntScale"
