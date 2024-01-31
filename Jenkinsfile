@@ -23,26 +23,6 @@ pipeline {
                 }
             }
         }
-
-        
-        stage('Set Azure subscription') {
-            steps {
-                script {
-                    // Login to Azure using Azure CLI
-                    //withCredentials([azureServicePrincipal('Jenkins-Azure-Integration-SPN')]) {
-                    // sh "az login --service-principal -u \$AZURE_CLIENT_ID -p \$AZURE_CLIENT_SECRET --tenant \$AZURE_TENANT_ID"
-                    // sh "az login --service-principal -u 7f707d6e-9b20-4963-ab1d-11383794c758 -p Zr18Q~QCK4uP6fVW5D4KermCwnCkRtjqr2E62b6Y --tenant d0e16214-52b0-43f5-879b-faf4fc79ccf3"
-                    }
-                    
-                    // Set Azure subscription
-                    //sh "az account set --subscription \$AZURE_SUBSCRIPTION_ID"
-                    // Create or update resource group and deploy ARM template
-                    //sh "az group create --name \$AZURE_RG_NAME --location \$AZURE_LOCATION"
-                    //sh "az deployment group create --resource-group \$AZURE_RG_NAME --template-file /var/lib/jenkins/workspace/ARM_Demo/arm-template.json --parameters /var/lib/jenkins/workspace/ARM_Demo/arm-parameters.json"
-                    //sh "az group delete --resource-group \$AZURE_RG_NAME --yes"
-                    //sh "az deployment group create --resource-group \$AZURE_RG_NAME --template-file \$AZURE_TEMPLATE_FILE --parameters \$AZURE_PARAMETERS_FILE --name \$AZURE_DEPLOYMENT_NAME"
-                }
-            }
         
         stage('Deploy CAF-Landing Zone') {
             steps {
