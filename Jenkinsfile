@@ -53,13 +53,13 @@ pipeline {
                         $Location = "EastUS"
                         $DeploymentName = "EntScale"
                         $TenantRootGroupId = "${(Get-AzTenant).Id}"
-                        $ManagementSubscriptionId = "top_level_mgmt_group"
-                        $ConnectivitySubscriptionId = "CAF_connectivity_SID"
+                        $ManagementSubscriptionId = "1860edbc-2aab-4083-aad2-ff6fa68ddd79"
+                        $ConnectivitySubscriptionId = "ca751fb4-e672-40d0-9d86-91827c006eab"
                         $ConnectivityAddressPrefix = "10.0.0.20/24"
-                        $IdentitySubscriptionId = "CAF_Identity_SID"
+                        $IdentitySubscriptionId = "58755c69-412e-4307-a49d-94f3d8074724"
                         $SecurityContactEmailAddress = "webashu@gmail.com"
-                        $CorpConnectedLandingZoneSubscriptionId = "CAF_LZ_SID" 
-                        $OnlineLandingZoneSubscriptionId = "ONL_LZ_SID"
+                        $CorpConnectedLandingZoneSubscriptionId = "xxxxxxx" 
+                        $OnlineLandingZoneSubscriptionId = "xxxxx"
                     '''
                     
                     // Run a PowerShell script from a file
