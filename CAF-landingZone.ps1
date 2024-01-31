@@ -111,7 +111,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-sub-diag" `
                                 -Location $Location `
                                 -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DINE-ActivityLogPolicyAssignment.json `
                                 -topLevelManagementGroupPrefix $ESLZPrefix `
-                                -logAnalyticsResourceId "/subscriptions/$($ManagementSubscriptionId)/resourceGroups/$($eslzPrefix)-mgmt/providers/Microsoft.OperationalInsights/workspaces/$($eslzPrefix)-law" `
+                                -logAnalyticsResourceId "/subscriptions/$($ManagementSubscriptionId)/resourceGroups/$($ESLZPrefix)-mgmt/providers/Microsoft.OperationalInsights/workspaces/$($ESLZPrefix)-law" `
                                 -ManagementGroupId $ESLZPrefix `
                                 -Verbose
 
@@ -121,7 +121,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-resource-diag" `
                                 -Location $Location `
                                 -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DINE-ResourceDiagnosticsPolicyAssignment.json `
                                 -topLevelManagementGroupPrefix $ESLZPrefix `
-                                -logAnalyticsResourceId "/subscriptions/$($ManagementSubscriptionId)/resourceGroups/$($eslzPrefix)-mgmt/providers/Microsoft.OperationalInsights/workspaces/$($eslzPrefix)-law" `
+                                -logAnalyticsResourceId "/subscriptions/$($ManagementSubscriptionId)/resourceGroups/$($ESLZPrefix)-mgmt/providers/Microsoft.OperationalInsights/workspaces/$($ESLZPrefix)-law" `
                                 -ManagementGroupId $ESLZPrefix `
                                 -Verbose
 
@@ -132,7 +132,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-mdfc-config" `
                                 -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DINE-MDFCConfigPolicyAssignment.json `
                                 -ManagementGroupId $eslzPrefix `
                                 -topLevelManagementGroupPrefix $ESLZPrefix `
-                                -logAnalyticsResourceId "/subscriptions/$($ManagementSubscriptionId)/resourceGroups/$($eslzPrefix)-mgmt/providers/Microsoft.OperationalInsights/workspaces/$($eslzPrefix)-law" `
+                                -logAnalyticsResourceId "/subscriptions/$($ManagementSubscriptionId)/resourceGroups/$($ESLZPrefix)-mgmt/providers/Microsoft.OperationalInsights/workspaces/$($ESLZPrefix)-law" `
                                 -enableAscForServers "DeployIfNotExists" `
                                 -enableAscForSql "DeployIfNotExists" `
                                 -enableAscForAppServices "DeployIfNotExists" `
