@@ -43,7 +43,7 @@ pipeline {
                     //sh "az deployment group create --resource-group \$AZURE_RG_NAME --template-file \$AZURE_TEMPLATE_FILE --parameters \$AZURE_PARAMETERS_FILE --name \$AZURE_DEPLOYMENT_NAME"
                 }
             }
-        }
+        
         stage('Deploy CAF-Landing Zone') {
             steps {
                 script {
@@ -69,9 +69,6 @@ pipeline {
                    
                 }
             }
-        }
-    
-
-
-}
+        }    
+    }
 }
