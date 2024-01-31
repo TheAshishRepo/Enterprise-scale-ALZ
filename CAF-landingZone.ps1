@@ -273,6 +273,7 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-aks-policy" `
 
 New-AzManagementGroupDeployment -Name "$($DeploymentName)-sql-auditing" `
                                 -Location $Location `
+                                -logAnalyticsResourceId "/subscriptions/$($ManagementSubscriptionId)/resourceGroups/$($ESLZPrefix)-mgmt/providers/Microsoft.OperationalInsights/workspaces/$($ESLZPrefix)-law" `
                                 -ManagementGroupId "$($ESLZPrefix)-landingzones" `
                                 -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DINE-SQLAuditingPolicyAssignment.json `
                                 -topLevelManagementGroupPrefix $ESLZPrefix `
