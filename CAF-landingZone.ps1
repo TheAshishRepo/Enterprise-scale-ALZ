@@ -1,7 +1,7 @@
 
 # Deploying management group structure for Enterprise-Scale
 
-New-AzManagementGroup -Name $DeploymentName `
+New-AzManagementGroupDeployment -Name $DeploymentName `
                       -ManagementGroupId $TenantRootGroupId `
                       -Location $Location `
                       -TemplateFile .\eslzArm\managementGroupTemplates\mgmtGroupStructure\mgmtGroups.json `
