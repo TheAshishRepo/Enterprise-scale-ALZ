@@ -210,12 +210,12 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-vm-backup" `
 
 # Assign Azure Policy to deny RDP access from internet into VMs (domain controllers) in the identity subscription
 
-New-AzManagementGroupDeployment -Name "$($DeploymentName)-vm-rdp" `
-                                -Location $Location `
-                                -ManagementGroupId "$($ESLZPrefix)-identity" `
-                                -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DENY-RDPFromInternetPolicyAssignment.json `
-                                -topLevelManagementGroupPrefix $eslzPrefix `
-                                -Verbose
+#New-AzManagementGroupDeployment -Name "$($DeploymentName)-vm-rdp" `
+#                                -Location $Location `
+#                                -ManagementGroupId "$($ESLZPrefix)-identity" `
+#                                -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DENY-RDPFromInternetPolicyAssignment.json `
+#                                -topLevelManagementGroupPrefix $eslzPrefix `
+#                                -Verbose
 
 # Assign Azure Policy to deny subnets without NSG in the identity subscription
 
@@ -245,12 +245,12 @@ New-AzManagementGroupDeployment -Name "$($DeploymentName)-lz-subnet-nsg" `
 
 # Assign Azure Policy to deny RDP access from internet into VMs on the landing zones management group
 
-New-AzManagementGroupDeployment -Name "$($DeploymentName)-lz-vm-rdp" `
-                                -Location $Location `
-                                -ManagementGroupId "$($ESLZPrefix)-landingzones" `
-                                -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DENY-RDPFromInternetPolicyAssignment.json `
-                                -topLevelManagementGroupPrefix $eslzPrefix `
-                                -Verbose
+#New-AzManagementGroupDeployment -Name "$($DeploymentName)-lz-vm-rdp" `
+#                                -Location $Location `
+#                                -ManagementGroupId "$($ESLZPrefix)-landingzones" `
+#                                -TemplateFile .\eslzArm\managementGroupTemplates\policyAssignments\DENY-RDPFromInternetPolicyAssignment.json `
+#                                -topLevelManagementGroupPrefix $eslzPrefix `
+#                                -Verbose
                                 
 # Assign Azure Policy to deny usage of storage accounts over http on the landing zones management group
 
