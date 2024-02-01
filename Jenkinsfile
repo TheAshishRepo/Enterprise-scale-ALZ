@@ -43,7 +43,7 @@ pipeline {
                         $SecurityContactEmailAddress = "webashu@gmail.com"
                         $CorpConnectedLandingZoneSubscriptionId = "xxxxxxx" 
                         $OnlineLandingZoneSubscriptionId = "xxxxx"
-                        .\\CAF-landingZone.ps1 
+                        powershell returnStatus: true, script: '.\\CAF-landingZone.ps1'
                     //'''
 
                     // Run a PowerShell script from a file
