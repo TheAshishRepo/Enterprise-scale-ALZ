@@ -29,9 +29,9 @@ pipeline {
                 script {
 
                      // Run multiple commands using a script block
-                    powershell '''
-                        az login --service-principal -u 7f707d6e-9b20-4963-ab1d-11383794c758 -p Zr18Q~QCK4uP6fVW5D4KermCwnCkRtjqr2E62b6Y --tenant d0e16214-52b0-43f5-879b-faf4fc79ccf3
-                        az account set --subscription ca751fb4-e672-40d0-9d86-91827c006eab
+                    //powershell '''
+                        sh "az login --service-principal -u 7f707d6e-9b20-4963-ab1d-11383794c758 -p Zr18Q~QCK4uP6fVW5D4KermCwnCkRtjqr2E62b6Y --tenant d0e16214-52b0-43f5-879b-faf4fc79ccf3"
+                        sh "az account set --subscription ca751fb4-e672-40d0-9d86-91827c006eab"
                         $ESLZPrefix = "CAF-LZ"
                         $Location = "EastUS"
                         $DeploymentName = "EntScale"
@@ -44,7 +44,7 @@ pipeline {
                         $CorpConnectedLandingZoneSubscriptionId = "xxxxxxx" 
                         $OnlineLandingZoneSubscriptionId = "xxxxx"
                         .\\CAF-landingZone.ps1 
-                    '''
+                    //'''
 
                     // Run a PowerShell script from a file
                     //powershell returnStatus: true, script: '/var/lib/jenkins/workspace/Enterprise-scale-Landing-Zone/src/scripts/CAF-landingZone.ps1'
