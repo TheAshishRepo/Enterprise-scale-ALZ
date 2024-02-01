@@ -30,7 +30,8 @@ pipeline {
 
                      // Run multiple commands using a script block
                     powershell '''
-                        Connect-AzAccount -ServicePrincipal -TenantId d0e16214-52b0-43f5-879b-faf4fc79ccf3 -ApplicationId 7f707d6e-9b20-4963-ab1d-11383794c758 -Credential (New-Object PSCredential -ArgumentList @("7f707d6e-9b20-4963-ab1d-11383794c758", (ConvertTo-SecureString -String Zr18Q~QCK4uP6fVW5D4KermCwnCkRtjqr2E62b6Y -AsPlainText -Force)))
+                        az login --service-principal -u 7f707d6e-9b20-4963-ab1d-11383794c758 -p Zr18Q~QCK4uP6fVW5D4KermCwnCkRtjqr2E62b6Y --tenant d0e16214-52b0-43f5-879b-faf4fc79ccf3
+                        az account set --subscription ca751fb4-e672-40d0-9d86-91827c006eab
                         $ESLZPrefix = "CAF-LZ"
                         $Location = "EastUS"
                         $DeploymentName = "EntScale"
