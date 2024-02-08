@@ -16,6 +16,15 @@ pipeline {
     }
 
     stages {
+
+        stage('Checkout') {
+            steps {
+                script {
+                    // Checkout your source code repository
+                    checkout scm
+                }
+            }
+        }
         stage ('Authenticate with Azure'){
             steps {
                 script {
@@ -25,14 +34,7 @@ pipeline {
                                }
                         
         
-        stage('Checkout') {
-            steps {
-                script {
-                    // Checkout your source code repository
-                    checkout scm
-                }
-            }
-        }
+        
         
         //stage('Deploy CAF-Landing Zone') {
           //  steps {
